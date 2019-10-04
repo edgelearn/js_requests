@@ -1,10 +1,6 @@
 <script>
 var xhr = new XMLHttpRequest();
 
-xhr.open('GET', 'https://api.weather.gov/points/39.7456,-97.0892');
-
-xhr.send();
-
 xhr.onload = function() {
   if (xhr.status !== 200) {
     alert('Error ' + xhr.status + ': ' + xhr.statusText);
@@ -25,4 +21,8 @@ xhr.onerror = function(error) {
   alert('Request failed');
   console.log(error);
 }
+
+xhr.open('GET', 'https://api.weather.gov/points/39.7456,-97.0892');
+
+xhr.send();
 </script>
